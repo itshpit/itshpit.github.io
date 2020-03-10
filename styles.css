@@ -1,0 +1,169 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F8F8F8;
+    font-family: Segoe UI, sans-serif;
+    font-size: 1.2rem;
+    color: #434343;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.full-height-grow {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.brand-logo img{
+    width: 75px;
+    height: 75px;
+}
+
+.brand-logo-name {
+    margin-left: 1rem;
+    font-size: 24px;
+}
+
+.main-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav a{
+    color: inherit;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.current-page {
+    font-weight: bold;
+}
+
+.main-nav a::hover {
+    color: #e4e1e1;
+}
+
+.main-header {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 80px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 3em;
+    margin-bottom: 3rem;
+    margin-top: 0;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.btn {
+    color: #F8F8F8;
+    background-color: #F7C873;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: #FAEBCD;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+footer h1, p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: inherit;
+    text-align: center;
+}
+
+.books-img {
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 33.3%;
+}
+
+li {
+    text-decoration: none;
+    display: inline;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    margin: 10px;
+    padding: 0 auto;
+}
+
+.social-name {
+    margin: 0px 10px;
+    font-size: inherit;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+
+    .column{
+        flex: 100%;
+    }
+}

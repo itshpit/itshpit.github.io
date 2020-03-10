@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="shortcut icon" href="images/book-website-icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Зворотній зв'язок</title>
+</head>
+<body>
+    <div>
+        <header class="main-header">
+            <a href="index.html" class="brand-logo">
+                <img src="images/book-website-icon.png">
+                <div class="brand-logo-name">Книжкова шафа</div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="articles.html">Статті</a></li>
+                    <li><a href="feedback.html" class="current-page">Зворотній зв'язок</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="fb-row">
+            <div class="fb-img-column">
+                <img src="images/karina-photo.jpeg" alt="Фото Каміли - авторки блогу" class="kamila-img">
+            </div>
+            <div class="fb-txt-column">
+                <p>Привіт! Я Каміла.</p>
+                <p>В минулому — студентка факультету 
+                    журналістики. Наразі — авторка книжкового блогу.</p>
+                <p>Читаю чужі та пишу свої твори.</p>
+                <p>Маю малесеньку мрію — опублікувати власну книгу. 
+                    Мій блог  —  це тільки один з кроків до її досягнення.</p>
+                <p>Запрошую вас до своєї книгородини.
+                    Тут тепло та затишно.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 class="form-title">Підпишись</h2>
+    <div class="form-subtitle">Стань частиною люблячої книгородини</div>
+    <form>
+        <div class="form-container">
+            <label for="name" class="cursive">Ім'я*</label> 
+            <input type="text" id="name" name="name"> <br>
+            <label for="email" class="cursive">Електронна пошта*</label>
+            <input type="email" id="email" name="email"><br>
+            <label for="gender" id="name" name="gender" class="cursive">Стать</label> <br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Чоловіча</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Жіноча</label><br>
+            <label for="interest" class="cursive">Ваші вподобання</label><br>
+            <input type="checkbox" id="interest1" name="interest1" value="book-review">
+            <label for="interest1"> Книжкові огляди</label>
+            <input type="checkbox" id="interest2" name="interest2" value="book-news">
+            <label for="interest2"> Новини зі світу книг</label>
+            <input type="checkbox" id="interest3" name="interest3" value="tips">
+            <label for="interest3"> Корисні спостереження та поради</label><br>
+            * - обов'язкові для заповнення поля <br>
+            <input type="submit" value="Підписатися">
+            
+        </div>
+        
+        
+
+    </form>
+
+    <footer>
+        <h1>Контактна інформація</h1>
+        <div class="row">
+            <div class="column">
+                <img src="images/old-books.png" alt="Books laying on each other.">
+            </div>
+            <div class="column">
+                <p>Поштова скринька</p>
+                <p>bookswardrobe@gmail.com</p>
+            </div>
+            <div class="column" style=>
+                <p>Соціальні мережі</p>
+                <div class="table">
+                    <ul>
+                        <li>
+                            <a class="social-media" href="#">
+                                <i class="fa fa-facebook"></i>
+                                <div class="social-name">Facebook</div>
+                            </a>  
+                        </li>
+                        <li>
+                            <a class="social-media" href="#">
+                                <i class="fa fa-instagram"></i>
+                                <div class="social-name">Instagram</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-media" href="#">
+                                <i class="fa fa-youtube"></i>
+                                <div class="social-name">YouTube</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-media" href="#">
+                                <i class="fa fa-telegram"></i>
+                                <div class="social-name">Telegram</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p>&copy; Книжкова шафа, 2020 р.</p>
+    </footer>
+</body>
+</html>
