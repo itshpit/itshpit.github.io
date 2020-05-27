@@ -3,13 +3,12 @@
   }
 
   .fb-img-column {
-    flex: 50%;
+    flex: 40%;
   }
 
   .fb-txt-column {
-    flex: 50%;
-    text-align: left;
-    margin: 3rem 0rem;
+    flex: 60%;
+    margin: 0 auto;
   }
 
   .kamila-img {
@@ -17,10 +16,8 @@
     max-height: 80vh;
     min-height: 70vh;
     width: auto;
-    margin: 0rem 15rem;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
+    margin: 0 auto;
+    
   }
 
   .fb-row .fb-txt-column p{
@@ -34,66 +31,82 @@
     margin-top: 40px;
   }
 
-  .form-title{
-      font-size: 2rem;
-      text-align: center;
-  }
-
-  .form-subtitle {
-    font-size: 1.4rem;
+.form-title{
+    font-size: 2rem;
     text-align: center;
-  }
+}
 
-  form {
-      margin: 2rem 0rem;
-      text-align: center;
-  }
+.form-subtitle {
+  font-size: 1.4rem;
+  text-align: center;
+}
 
-  .form-lbl-col {
-    flex: 25%;
-  }
+form {
+    margin: 2rem 0rem;
+    text-align: center;
+}
 
-  .form-input-col {
-    flex:75%;
-  }
+label{
+  margin: 0;
+}
 
-  input[type=text], input[type=email] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 1px solid #434343;
-    background-color: #F8F8F8;
+@media (max-width: 1024px) {
+  form{
+    display: block;
   }
+}
 
-  input[type=checkbox], input[type=radio] {
-      margin: 0rem 0rem 2rem 1rem;
-  }
+form ul{
+  font-size: inherit;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
-  .cursive {
-      font-style: italic;
-  }
+.form-lbl-col {
+  flex: 25%;
+}
 
-  input[type=submit] {
-    background: #F8F8F8;
-    mix-blend-mode: normal;
-    border: 2px solid #434343;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-family: inherit;
-    color: #434343;
-    padding: 15px;
-    margin-top: 1rem;
-    cursor: pointer;
-  }
+.form-input-col {
+  flex:75%;
+}
 
-  @media (max-width: 1200px) {
-    .fb-img-column {
-      flex: 100%;
+input[type=text], input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #434343;
+  background-color: #F8F8F8;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 0rem 0rem 2rem 1rem;
+}
+
+.cursive {
+  font-style: italic;
+}
+
+input[type=submit] {
+  background: #F8F8F8;
+  mix-blend-mode: normal;
+  border: 2px solid #434343;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #434343;
+  padding: 15px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+  @media (max-width: 1024px) {
+    .fb-row {
+      display: block;
     }
-  
-    .fb-txt-column {
-      flex: 100%;
+    .kamila-img {
+      display: block;
+      margin: 0 auto;
     }
   }

@@ -15,19 +15,32 @@
 </head>
 <body>
     
-        <header class="main-header">
-            <a href="index.html" class="brand-logo">
-                <img src="images/book-website-icon.png">
-                <div class="brand-logo-name">Книжкова шафа</div>
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="current-page">Головна</a></li>
-                    <li><a href="articles.html">Статті</a></li>
-                    <li><a href="feedback.html">Зворотній зв'язок</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header class="header">
+        <div class="header_container">
+            <div class="header__body">
+                <a href="index.html" class="header__logo">
+                    <img src="images/book-website-icon.png" alt="Логотип сайту">
+                    <div class="logo-name">Книжкова шафа</div>
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="index.html" class="header__link"><b>Головна</b></a>
+                        </li>
+                        <li>
+                            <a href="articles.html" class="header__link">Статті</a>
+                        </li>
+                        <li>
+                            <a href="feedback.html" class="header__link">Зворотній зв'язок</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <section class="home-main-section">
             <div class="call-to-action">
@@ -114,50 +127,45 @@
     </div>
     
     <footer>
-        <h1>Контактна інформація</h1>
-        <div class="row">
-            <div class="column">
-                <div class="books-img">
-                    <img src="images/old-books.png" alt="">
+        <div class="footer_container">
+            <h1>Контактна інформація</h1>
+            <div class="row">
+                <div class="column">
+                    <p>Поштова скринька</p>
+                    <p>bookswardrobe@gmail.com</p>
+                </div>
+                <div class="column" style=>
+                    <p>Соціальні мережі</p>
+                        <ul>
+                            <li>
+                                <a class="social-media" href="#">
+                                    <i class="fa fa-facebook"></i>
+                                    <div class="social-name">Facebook</div>
+                                </a>  
+                            </li>
+                            <li>
+                                <a class="social-media" href="#">
+                                    <i class="fa fa-instagram"></i>
+                                    <div class="social-name">Instagram</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-media" href="#">
+                                    <i class="fa fa-youtube"></i>
+                                    <div class="social-name">YouTube</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social-media" href="#">
+                                    <i class="fa fa-telegram"></i>
+                                    <div class="social-name">Telegram</div>
+                                </a>
+                            </li>
+                        </ul>
                 </div>
             </div>
-            <div class="column">
-                <p>Поштова скринька</p>
-                <p>bookswardrobe@gmail.com</p>
-            </div>
-            <div class="column" style=>
-                <p>Соціальні мережі</p>
-                <div class="table">
-                    <ul>
-                        <li>
-                            <a class="social-media" href="#">
-                                <i class="fa fa-facebook"></i>
-                                <div class="social-name">Facebook</div>
-                            </a>  
-                        </li>
-                        <li>
-                            <a class="social-media" href="#">
-                                <i class="fa fa-instagram"></i>
-                                <div class="social-name">Instagram</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="social-media" href="#">
-                                <i class="fa fa-youtube"></i>
-                                <div class="social-name">YouTube</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="social-media" href="#">
-                                <i class="fa fa-telegram"></i>
-                                <div class="social-name">Telegram</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <p>&copy; Книжкова шафа, 2020 р.</p>
+            <p>&copy; Книжкова шафа, 2020 р.</p>
+        </div>  
     </footer>
 
     <!--Slick Carousel-->
@@ -165,7 +173,9 @@
 
     
 
-    <!--My Scripts-->
-    <script type="text/javascript" src="scripts.js""></script>
+    <!--JQuery-->
+    <script src="http://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!--JS-->
+    <script src="scripts.js"></script>
 </body>
 </html>

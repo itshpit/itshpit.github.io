@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *, *::before, *::after{
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            color: #434343;
+            height: 100%;
+            background-color: #F8F8F8;
+            font-family: Segoe UI, sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .container{
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0px 10px;
+        }
+
+        .header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 50;
+        }
+
+        .header:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F8F8F8;
+            z-index: 2;
+        }
+
+        .header__body{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            align-items: center;
+        }
+
+        .header__logo{
+            display: flex;
+            z-index: 3;
+            align-items: center;
+            font-size: 1.25rem;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .header__logo img{
+            width: 65px;
+            height: 65px;
+        }
+
+        .logo-name{
+            margin-left: 1rem;
+            font-size: 24px;
+        }
+
+        .header__burger{
+            display: none;
+        }
+
+        .header__list{
+            display: flex;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header__list li{
+            list-style: none;
+            margin: 0px 0px 0px 40px;
+        }
+
+        .header__link{
+            font-size: 18px;
+            text-decoration: none;
+            color: #434343;
+        }
+
+        @media (max-width: 767px) {
+            body.lock{
+                overflow: hidden;
+            }
+
+            .header__body{
+                height: 50px;
+            }
+            .header__logo img{
+                width: 45px;
+                height: 45px;
+            }
+            .header__burger{
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 20px;
+                position: relative;
+                z-index: 3;
+            }
+            .header__burger span{
+                position: absolute;
+                background-color: #434343;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.3s ease 0s;
+            }
+            .header__burger:before,
+            .header__burger:after{
+                content: '';
+                background-color: #434343;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                transition: all 0.3s ease 0s;
+            }
+            .header__burger:before{
+                top: 1px;
+            }
+            .header__burger:after{
+                bottom: 1px;
+            }
+            .header__burger.active span{
+                transform: scale(0);
+            }
+            .header__burger.active:before{
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            .header__burger.active:after{
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+
+            .header__menu{
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                transition: all 0.3s ease 0s;
+                background-color: #FAEBCD;
+                padding: 70px 10px 20px 10px;
+            }
+            .header__menu.active{
+                top: 0;
+            }
+
+                .header__list{
+                display: block;
+            }
+            .header__list li{
+                margin: 0px 0px 20px 0px;
+            }
+
+            .header__link{
+                font-size: 20px;
+            }
+        }
+
+        
+
+        .content{
+            padding-top: 100px;
+        }
+
+        @media (max-width: 767px)) {
+            content{
+                padding-top: 70px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__body">
+                    <a href="" class="header__logo">
+                        <img src="images/book-website-icon.png" alt="Логотип сайту">
+                        <div class="logo-name">Книжкова шафа</div>
+                    </a>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li>
+                                <a href="" class="header__link">Головна</a>
+                            </li>
+                            <li>
+                                <a href="" class="header__link">Статті</a>
+                            </li>
+                            <li>
+                                <a href="" class="header__link">Зворотній зв'язок</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sem lectus, auctor vitae nisi sodales, pulvinar laoreet ex. Aenean aliquam tortor vitae felis convallis tincidunt. Nam erat nulla, aliquet at velit ac, porttitor varius ex. Phasellus nulla mi, faucibus vitae egestas a, pulvinar ac arcu. Vestibulum sed tincidunt urna. Curabitur eu facilisis neque. Aenean dignissim metus tellus, nec molestie est porttitor id. Maecenas dolor eros, tincidunt et posuere a, auctor in nunc. Mauris sit amet ultrices lacus, nec volutpat justo. Sed sed commodo quam. Duis a ipsum fringilla nisl malesuada rhoncus rhoncus eu nulla. Mauris interdum interdum ex, sed porta quam finibus vitae. Ut sollicitudin nec nulla tempus semper. Suspendisse ac dui venenatis, interdum urna ac, aliquam magna. Proin gravida felis et pretium aliquet. Phasellus mattis ligula vel tellus convallis, sit amet iaculis arcu auctor.
+
+                Etiam hendrerit lectus non fermentum pellentesque. Cras blandit diam vestibulum enim iaculis pellentesque. Morbi hendrerit leo a neque lobortis, vitae molestie ex mollis. Nulla dictum tempus neque sit amet imperdiet. Duis varius, est nec dignissim convallis, justo nisi scelerisque mauris, vitae scelerisque libero eros sed lorem. Vestibulum commodo tortor malesuada nibh convallis, nec viverra eros dictum. Nulla arcu massa, maximus in neque eget, hendrerit accumsan arcu. Donec pretium neque mollis condimentum lacinia. Quisque aliquet velit mattis, ultricies orci vitae, semper diam. Vivamus fermentum nec leo a eleifend.
+
+                Duis venenatis venenatis sem, at semper odio commodo sit amet. Pellentesque congue, arcu at dictum vulputate, felis sem venenatis ligula, ac lobortis diam dui eget elit. Donec semper sed quam eget ullamcorper. Fusce molestie laoreet tincidunt. Maecenas laoreet, magna a dictum cursus, mauris leo viverra lectus, eget mollis nibh eros quis leo. Curabitur pulvinar sodales tempor. Pellentesque enim nulla, fringilla facilisis congue non, mattis nec enim. Aenean dictum iaculis velit quis pretium. Duis cursus cursus malesuada. Aenean eu nisl ut urna viverra ultricies non nec lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+                Mauris eu lacus suscipit, fringilla dui eu, consectetur odio. Morbi feugiat orci id mi porta placerat in vitae diam. Nulla sed massa massa. Nulla justo diam, sodales in nisi at, viverra varius dolor. Maecenas efficitur, diam vitae ultricies imperdiet, nisl felis convallis arcu, a ornare turpis nulla vitae turpis. Sed convallis urna non nisl pulvinar feugiat. Cras id luctus libero, quis sodales elit. Donec nisl erat, scelerisque a bibendum ac, placerat vitae velit. Suspendisse eget ornare leo. Morbi eu mauris vestibulum, ultricies felis non, venenatis justo. Donec ante tortor, rhoncus eget ullamcorper ut, rhoncus in ligula. Quisque sed dignissim elit.
+
+                Pellentesque sit amet dui bibendum, elementum nisi at, scelerisque mauris. Ut condimentum ut tellus a luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius dui efficitur velit ultricies lacinia. In consequat sem ut felis consectetur gravida. Ut vulputate, enim sit amet facilisis viverra, velit ipsum commodo nisl, a lacinia libero purus eu risus. Quisque maximus dignissim sapien eu feugiat. Donec condimentum, massa vitae venenatis tempor, ligula leo ultricies libero, vitae eleifend justo est eget mauris. Vivamus tempus sem sed nisl dignissim maximus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sem lectus, auctor vitae nisi sodales, pulvinar laoreet ex. Aenean aliquam tortor vitae felis convallis tincidunt. Nam erat nulla, aliquet at velit ac, porttitor varius ex. Phasellus nulla mi, faucibus vitae egestas a, pulvinar ac arcu. Vestibulum sed tincidunt urna. Curabitur eu facilisis neque. Aenean dignissim metus tellus, nec molestie est porttitor id. Maecenas dolor eros, tincidunt et posuere a, auctor in nunc. Mauris sit amet ultrices lacus, nec volutpat justo. Sed sed commodo quam. Duis a ipsum fringilla nisl malesuada rhoncus rhoncus eu nulla. Mauris interdum interdum ex, sed porta quam finibus vitae. Ut sollicitudin nec nulla tempus semper. Suspendisse ac dui venenatis, interdum urna ac, aliquam magna. Proin gravida felis et pretium aliquet. Phasellus mattis ligula vel tellus convallis, sit amet iaculis arcu auctor.
+
+                Etiam hendrerit lectus non fermentum pellentesque. Cras blandit diam vestibulum enim iaculis pellentesque. Morbi hendrerit leo a neque lobortis, vitae molestie ex mollis. Nulla dictum tempus neque sit amet imperdiet. Duis varius, est nec dignissim convallis, justo nisi scelerisque mauris, vitae scelerisque libero eros sed lorem. Vestibulum commodo tortor malesuada nibh convallis, nec viverra eros dictum. Nulla arcu massa, maximus in neque eget, hendrerit accumsan arcu. Donec pretium neque mollis condimentum lacinia. Quisque aliquet velit mattis, ultricies orci vitae, semper diam. Vivamus fermentum nec leo a eleifend.
+
+                Duis venenatis venenatis sem, at semper odio commodo sit amet. Pellentesque congue, arcu at dictum vulputate, felis sem venenatis ligula, ac lobortis diam dui eget elit. Donec semper sed quam eget ullamcorper. Fusce molestie laoreet tincidunt. Maecenas laoreet, magna a dictum cursus, mauris leo viverra lectus, eget mollis nibh eros quis leo. Curabitur pulvinar sodales tempor. Pellentesque enim nulla, fringilla facilisis congue non, mattis nec enim. Aenean dictum iaculis velit quis pretium. Duis cursus cursus malesuada. Aenean eu nisl ut urna viverra ultricies non nec lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+                Mauris eu lacus suscipit, fringilla dui eu, consectetur odio. Morbi feugiat orci id mi porta placerat in vitae diam. Nulla sed massa massa. Nulla justo diam, sodales in nisi at, viverra varius dolor. Maecenas efficitur, diam vitae ultricies imperdiet, nisl felis convallis arcu, a ornare turpis nulla vitae turpis. Sed convallis urna non nisl pulvinar feugiat. Cras id luctus libero, quis sodales elit. Donec nisl erat, scelerisque a bibendum ac, placerat vitae velit. Suspendisse eget ornare leo. Morbi eu mauris vestibulum, ultricies felis non, venenatis justo. Donec ante tortor, rhoncus eget ullamcorper ut, rhoncus in ligula. Quisque sed dignissim elit.
+
+                Pellentesque sit amet dui bibendum, elementum nisi at, scelerisque mauris. Ut condimentum ut tellus a luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius dui efficitur velit ultricies lacinia. In consequat sem ut felis consectetur gravida. Ut vulputate, enim sit amet facilisis viverra, velit ipsum commodo nisl, a lacinia libero purus eu risus. Quisque maximus dignissim sapien eu feugiat. Donec condimentum, massa vitae venenatis tempor, ligula leo ultricies libero, vitae eleifend justo est eget mauris. Vivamus tempus sem sed nisl dignissim maximus.
+                            
+            </div>
+        </div>
+    </div>
+    <!--JQuery-->
+    <script src="http://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!--JS-->
+    <script src="scripts.js"></script>
+</body>
+</html>

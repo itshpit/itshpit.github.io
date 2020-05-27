@@ -49,8 +49,17 @@ input[type=text]{
 }
 
 .input-section {
-    
     display: flex;
+}
+
+@media (max-width: 1200px){
+    .input-section {
+        display: block;
+    }
+    .input-section .search-input{
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
 }
 
 .input-section .sort-input{
@@ -155,6 +164,12 @@ input[type=text]{
 
 .about-article{
     display: flex;
+}
+
+@media (max-width: 900px){
+    .about-article{
+        display: block;
+    }
 }
 
 .recommend-article .article-image{
