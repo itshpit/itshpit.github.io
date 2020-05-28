@@ -190,6 +190,16 @@ input[type=text]{
     padding: 15px;
 }
 
+@media(max-width: 767px){
+    .recommend-article .article-text h1{
+        font-size: 26px;
+    }
+    .recommend-article .article-text p{
+        font-size: 20px;
+    }
+}
+
+
 .recommend-article .article-text .article-link{
     text-align: right;
     text-decoration: none;
