@@ -311,7 +311,11 @@ li {
         max-width: none;
     }
 
+    .row{
+        display: block;
+    }
+
     .column{
-        flex: 100%;
+        display: block;
     }
 }
