@@ -1,42 +1,42 @@
 function createTable(){
-    var table = '<h2>2. Введіть до таблиці значення виграшів та ймовірностей</h2>';
+    var task = '<h2>2. Введіть до таблиці значення виграшів та ймовірностей</h2>';
     var rows = document.getElementById("row-number").value;
     var сols = document.getElementById("col-number").value;
     
-    table += '<tr><td rowspan="2" style = "border: 1px solid #000; padding: 5px;">Стратегії</td>';
-    table += '<td colspan="' + сols.toString() + '" style = "border: 1px solid #000; padding: 5px;">Стани природи</td>';
-    table += '<td rowspan="2" style = "border: 1px solid #000; padding: 5px;">Виграш</td></tr>';
-    table += '<tr style ="text-align: center; border: 1px solid #000; padding: 5px;">';
+    var table = '<tr><td rowspan="2">Стратегії</td>';
+    table += '<td colspan="' + сols.toString() + '">Стани природи</td>';
+    table += '<td rowspan="2">Середній виграш</td></tr>';
+    table += '<tr>';
     for(var c = 1; c <= сols; c++)
     {
-        table += '<td style = "border: 1px solid #000; padding: 5px;">П<sub>' + c + '</sub></td>';
+        table += '<td>П<sub>' + c + '</sub></td>';
     }
 
     //table += '<\tr>';
 
     for(var r = 1; r <= rows; r++)
     {
-        table += '<tr style ="text-align: center; border: 1px solid #000; padding: 5px;">';
-        table += '<td style = "border: 1px solid #000; padding: 5px;">A<sub>' + r + '</sub></td>';
+        table += '<tr>';
+        table += '<td>A<sub>' + r + '</sub></td>';
         for(var c = 1; c <= сols; c++)
         {
-            table += '<td contenteditable="true" style = "border: 1px solid #000; padding: 5px;">' + c + r + '</td>';
+            table += '<td contenteditable="true" >' + c + r + '</td>';
         }
-        table += '<td contenteditable="true" style = "border: 1px solid #000; padding: 5px;"></td>';
+        table += '<td contenteditable="true"></td>';
         table += '</tr>';
     }
 
-    table += '<tr style ="text-align: center; border: 1px solid #000; padding: 5px;">';
-    table += '<td style = "border: 1px solid #000; padding: 5px;">Ймовірність події</td>';
+    table += '<tr>';
+    table += '<td>Ймовірність події</td>';
     for(var c = 1; c <= сols; c++)
     {
-        table += '<td contenteditable="true" style = "border: 1px solid #000; padding: 5px;"></td>';
+        table += '<td contenteditable="true"></td>';
     }
-    table += '<td style = "border: 1px solid #000; padding: 5px;"></td>';
+    table += '<td></td>';
     table += '</tr>';
 
-    table = '<table id = "myTable" style = "border: 1px solid #000; border-spacing: 0;">' + table + '</table>';
-    table += '<button onclick = "tableComplete()" style = "border: none; color: white; padding: 10px 25px; text-align: center; background-color: #636b6f; margin-top: 5px;">Таблиця заповнена</button>'
+    table = task + '<div class = "table-container"><table id = "myTable">' + table + '</table></div>';
+    table += '<button onclick = "tableComplete()">Таблиця заповнена</button>'
     document.getElementById("table").innerHTML = table;
 }
 
@@ -52,7 +52,7 @@ function tableComplete(){
     task += '<label><input type="checkbox" id="cbGurvitz"/>Гурвіца</label><br>';
     task += '</fieldset>';
 
-    task += '<button onclick = "getAnswer()" style = "border: none; color: white; padding: 10px 25px; text-align: center; background-color: #636b6f; margin-top: 5px;">Отримати результат</button>';
+    task += '<button onclick = "getAnswer()">Отримати результат</button>';
 
     document.getElementById("choose").innerHTML = task;
 
@@ -90,7 +90,7 @@ function getAnswer(){
         goGurvitz();
     }
 
-    var btn = '<button onclick="saveFile() style = "border: none; color: white; padding: 10px 25px; text-align: center; background-color: #636b6f;"">Зберегти результат</button>';
+    var btn = '<button onclick="saveFile()">Зберегти результат</button>';
 
     document.getElementById("save").innerHTML = btn;
 }
