@@ -7,11 +7,10 @@
     
     <title>Статистична гра</title>
 
-    <!-- jQuery library -->
-    <script src="script/jquery-3.5.1.min.js"></script>
+    <!-- jQuery library 
+    <script src="script/jquery-3.5.1.min.js"></script>-->
 
-    <!-- jsPDF library -->
-    <script src="script/jsPDF-1.3.2/dist/jspdf.min.js"></script>
+    <script src = "script/fileSaver.js"></script>
     
 </head>
 <body>
@@ -25,18 +24,18 @@
         <button id = "btnInput" onclick="createTable()">Готово</button>
 
         <br><br>
-        <div id = "table"></div>
+        <div id = "HTMLtoPDF"></div>
         <div id = "choose"></div>
         <div id = "Bayes"></div>
         <div id = "Laplas"></div>
         <div id = "Wald"></div>
         <div id = "Sevidg"></div>
         <div id = "Gurvitz"></div>
+
+        <div id = "save"></div>
     </div>
       
 
     <script src="game.js"></script>
-
-
 </body>
 </html>
